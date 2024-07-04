@@ -205,7 +205,7 @@ class NeRFNetwork(NeRFRenderer):
         return sigma, color, normal
 
       
-    def density(self, x):
+    def density(self, x, is_grad):
         # x: [N, 3], in [-bound, bound]
         
         sigma, albedo = self.common_forward(x)
